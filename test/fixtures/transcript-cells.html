@@ -1,0 +1,107 @@
+<!--
+  Minimal fixture mirroring the Microsoft Stream transcript DOM structure
+  (real ids/classes, fictional names, no secrets). Three cells:
+    index 0: a system event row ("started transcription")
+    index 1: a normal speaker row, including the inline edit-button chrome that
+             Stream renders on the active/hovered row (icon glyph + "Edit" +
+             the "Use enter key to enable transcript edit mode" tooltip)
+    index 2: a normal speaker row
+-->
+<div class="ms-List-page" role="presentation">
+  <div role="presentation" class="ms-List-cell" data-list-index="0" data-automationid="ListCell">
+    <div id="listItem-0" class="meetingEvent-591">
+      <div id="rightColumn-0" class="rightColumn-594">
+        <div data-testid="entryRenderer">
+          <div class="baseEntry-695" id="entry-0" role="group" aria-label=" ">
+            <span id="timestampSpeakerAriaLabel-0" class="screenReaderFriendlyHiddenTag-619"></span>
+            <div id="sub-entry-0" class="eventText-706" role="listitem">
+              <p class="eventSpeakerName-705">Sam Tester</p>
+              <span id="edit-aria-div-0">
+                <span tabindex="-1" id="text-0"> started transcription</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div role="presentation" class="ms-List-cell" data-list-index="1" data-automationid="ListCell">
+    <div id="listItem-1" class="listItemWithSpeaker-586">
+      <div id="rightColumn-1" class="rightColumn-594">
+        <div role="listitem" id="itemHeader-1" class="itemHeader-620">
+          <span class="itemDisplayName-711">Alex Example</span>
+          <div role="presentation" class="baseTimestamp-707">
+            <span class="screenReaderFriendlyHiddenTag-619">0 minutes 5 seconds</span>
+            <span id="Header-timestamp-1" aria-hidden="true">0:05</span>
+          </div>
+        </div>
+        <div class="entryTextContainer-599" data-testid="EditWrapper">
+          <div data-testid="entryRenderer">
+            <div class="baseEntry-695" id="entry-1" role="group" aria-label="Alex Example 0 minutes 5 seconds">
+              <span id="timestampSpeakerAriaLabel-1" class="screenReaderFriendlyHiddenTag-619">Alex Example 0 minutes 5 seconds</span>
+              <div id="sub-entry-1" class="entryText-696" role="listitem">
+                <span id="edit-aria-div-1">
+                  <span tabindex="-1" id="text-1">OK, just give me a second.</span>
+                </span>
+                <button type="button" class="editButton-700"><i data-icon-name="Edit" aria-hidden="true">&#xE70F;</i>Edit</button>
+                <span class="screenReaderFriendlyHiddenTag-619">Use enter key to enable transcript edit mode</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div role="presentation" class="ms-List-cell" data-list-index="2" data-automationid="ListCell">
+    <div id="listItem-2" class="listItemWithSpeaker-586">
+      <div id="rightColumn-2" class="rightColumn-594">
+        <div role="listitem" id="itemHeader-2" class="itemHeader-620">
+          <span class="itemDisplayName-711">Alex Example</span>
+          <div role="presentation" class="baseTimestamp-707">
+            <span class="screenReaderFriendlyHiddenTag-619">0 minutes 34 seconds</span>
+            <span id="Header-timestamp-2" aria-hidden="true">0:34</span>
+          </div>
+        </div>
+        <div class="entryTextContainer-599" data-testid="EditWrapper">
+          <div data-testid="entryRenderer">
+            <div class="baseEntry-695" id="entry-2" role="group" aria-label="Alex Example 0 minutes 34 seconds">
+              <span id="timestampSpeakerAriaLabel-2" class="screenReaderFriendlyHiddenTag-619">Alex Example 0 minutes 34 seconds</span>
+              <div id="sub-entry-2" class="entryText-696" role="listitem">
+                <span id="edit-aria-div-2">
+                  <span tabindex="-1" id="text-2">OK, can you see the presentation?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    A same-speaker continuation row. Stream does NOT repeat the speaker header or
+    the visible Header-timestamp element here (the time only exists as a hidden
+    aria label), so this row reads with an empty timestamp by design.
+  -->
+  <div role="presentation" class="ms-List-cell" data-list-index="3" data-automationid="ListCell">
+    <div id="listItem-3" class="listItemWithSpeaker-586">
+      <div id="leftColumn-3" class="leftColumnWithSpeaker-592"></div>
+      <div id="rightColumn-3" class="rightColumn-594">
+        <div class="entryTextContainer-599" data-testid="EditWrapper">
+          <div data-testid="entryRenderer">
+            <div class="baseEntry-695" id="entry-3" role="group" aria-label="Alex Example 0 minutes 40 seconds">
+              <span id="timestampSpeakerAriaLabel-3" class="screenReaderFriendlyHiddenTag-619">Alex Example 0 minutes 40 seconds</span>
+              <div id="sub-entry-3" class="entryText-696" role="listitem">
+                <span id="edit-aria-div-3">
+                  <span tabindex="-1" id="text-3">Let me share my screen.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

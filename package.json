@@ -1,0 +1,21 @@
+{
+  "name": "msft-stream-transcript-downloader",
+  "version": "0.7.0",
+  "description": "Download visible Microsoft Stream and Teams transcript text from the browser.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-bookmarklet.mjs",
+    "check": "node --check src/ms-stream-transcript-downloader.js && node --check scripts/build-bookmarklet.mjs && node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "microsoft-stream",
+    "teams",
+    "transcript",
+    "bookmarklet"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "linkedom": "^0.18.12"
+  }
+}
